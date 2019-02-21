@@ -21,6 +21,9 @@ class PagePath {
     fun quadTo(x: Float, y: Float, x1: Float, y1: Float) =
         mPoints.add(PagePoint.quadTo(x, y, x1, y1, QUAD))
 
+    fun getPoints(): Collection<PagePoint> {
+        return mPoints
+    }
 
     companion object {
 

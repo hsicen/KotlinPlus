@@ -135,7 +135,7 @@ class PageView(context: Context, attrs: AttributeSet?, def: Int) : View(context,
         headPath.moveTo(mPointHead.x, mPointHead.y)
         headPath.curveTo((-100).toPx(), 80.toPx(), 130.toPx(), 330.toPx(), 170.toPx(), 170.toPx())
         headPath.quadTo(210.toPx(), 170.toPx(), 240.toPx(), 155.toPx())
-        ValueAnimator.ofObject(PagePathEvaluator(), headPath.mPoints.toArray())
+        ValueAnimator.ofObject(PagePathEvaluator(), headPath.getPoints().toTypedArray())
             .apply {
 
                 addUpdateListener {
@@ -152,7 +152,7 @@ class PageView(context: Context, attrs: AttributeSet?, def: Int) : View(context,
         mPathEar1.moveTo(mPointEar1.x, mPointEar1.y)
         pathEar1.moveTo(mPointEar1.x, mPointEar1.y)
         pathEar1.curveTo(120.toPx(), 50.toPx(), 160.toPx(), 50.toPx(), 150.toPx(), 102.toPx())
-        ValueAnimator.ofObject(PagePathEvaluator(), pathEar1.mPoints.toArray()).apply {
+        ValueAnimator.ofObject(PagePathEvaluator(), pathEar1.getPoints().toTypedArray()).apply {
 
             addUpdateListener {
                 mPointEar1 = it.animatedValue as PagePoint
@@ -168,7 +168,7 @@ class PageView(context: Context, attrs: AttributeSet?, def: Int) : View(context,
         mPathEar2.moveTo(mPointEar2.x, mPointEar2.y)
         pathEar2.moveTo(mPointEar2.x, mPointEar2.y)
         pathEar2.curveTo(80.toPx(), 53.toPx(), 120.toPx(), 52.toPx(), 120.toPx(), 105.toPx())
-        ValueAnimator.ofObject(PagePathEvaluator(), pathEar2.mPoints.toArray()).apply {
+        ValueAnimator.ofObject(PagePathEvaluator(), pathEar2.getPoints().toTypedArray()).apply {
 
             addUpdateListener {
 
@@ -188,7 +188,7 @@ class PageView(context: Context, attrs: AttributeSet?, def: Int) : View(context,
         pathBody.quadTo(100.toPx(), 320.toPx(), 180.toPx(), 320.toPx())
         pathBody.quadTo(180.toPx(), 270.toPx(), 150.toPx(), 210.toPx())
 
-        ValueAnimator.ofObject(PagePathEvaluator(), pathBody.mPoints.toArray()).apply {
+        ValueAnimator.ofObject(PagePathEvaluator(), pathBody.getPoints().toTypedArray()).apply {
 
             addUpdateListener {
 
@@ -206,7 +206,7 @@ class PageView(context: Context, attrs: AttributeSet?, def: Int) : View(context,
         mPathArmRight.moveTo(mPointArmRight.x, mPointArmRight.y)
         pathArmRight.moveTo(mPointArmRight.x, mPointArmRight.y)
         pathArmRight.quadTo(170.toPx(), 230.toPx(), 210.toPx(), 245.toPx())
-        ValueAnimator.ofObject(PagePathEvaluator(), pathArmRight.mPoints.toArray()).apply {
+        ValueAnimator.ofObject(PagePathEvaluator(), pathArmRight.getPoints().toTypedArray()).apply {
 
             addUpdateListener {
 
@@ -223,7 +223,7 @@ class PageView(context: Context, attrs: AttributeSet?, def: Int) : View(context,
         mPathHandRight.moveTo(mPointHandRight.x, mPointHandRight.y)
         pathHandRight.moveTo(mPointHandRight.x, mPointHandRight.y)
         pathHandRight.quadTo(190.toPx(), 242.toPx(), 207.toPx(), 255.toPx())
-        ValueAnimator.ofObject(PagePathEvaluator(), pathHandRight.mPoints.toArray()).apply {
+        ValueAnimator.ofObject(PagePathEvaluator(), pathHandRight.getPoints().toTypedArray()).apply {
 
             addUpdateListener {
 
@@ -240,7 +240,7 @@ class PageView(context: Context, attrs: AttributeSet?, def: Int) : View(context,
         mPathArmLeft.moveTo(mPointArmLeft.x, mPointArmLeft.y)
         pathArmLeft.moveTo(mPointArmLeft.x, mPointArmLeft.y)
         pathArmLeft.quadTo(70.toPx(), 230.toPx(), 20.toPx(), 245.toPx())
-        ValueAnimator.ofObject(PagePathEvaluator(), pathArmLeft.mPoints.toArray()).apply {
+        ValueAnimator.ofObject(PagePathEvaluator(), pathArmLeft.getPoints().toTypedArray()).apply {
 
             addUpdateListener {
 
@@ -257,7 +257,7 @@ class PageView(context: Context, attrs: AttributeSet?, def: Int) : View(context,
         mPathHandLeft.moveTo(mPointHandLeft.x, mPointHandLeft.y)
         pathHandLeft.moveTo(mPointHandLeft.x, mPointHandLeft.y)
         pathHandLeft.quadTo(190.toPx(), 242.toPx(), 207.toPx(), 255.toPx())
-        ValueAnimator.ofObject(PagePathEvaluator(), pathHandLeft.mPoints.toArray()).apply {
+        ValueAnimator.ofObject(PagePathEvaluator(), pathHandLeft.getPoints().toTypedArray()).apply {
 
             addUpdateListener {
 
@@ -275,7 +275,7 @@ class PageView(context: Context, attrs: AttributeSet?, def: Int) : View(context,
         pathTail.moveTo(mPointTail.x, mPointTail.y)
         pathTail.curveTo(30.toPx(), 330.toPx(), 30.toPx(), 280.toPx(), 40.toPx(), 300.toPx())
         pathTail.curveTo(40.toPx(), 320.toPx(), 20.toPx(), 300.toPx(), 0.toPx(), 310.toPx())
-        ValueAnimator.ofObject(PagePathEvaluator(), pathTail.mPoints.toArray()).apply {
+        ValueAnimator.ofObject(PagePathEvaluator(), pathTail.getPoints().toTypedArray()).apply {
 
             addUpdateListener {
 
