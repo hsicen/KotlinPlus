@@ -12,7 +12,7 @@ import kotlinx.coroutines.runBlocking
  * <p>描述：KotlinPlus
  */
 
-fun main(args: Array<String>) = runBlocking {
+fun main() = runBlocking {
     val job = launch {
         repeat(1000) {
             println("挂起中...$it")
