@@ -5,18 +5,6 @@
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
   </component>
-  <component name="CheckStyle-IDEA">
-    <option name="configuration">
-      <map>
-        <entry key="checkstyle-version" value="8.2" />
-        <entry key="location-0" value="BUNDLED:(bundled):Sun Checks" />
-        <entry key="location-1" value="BUNDLED:(bundled):Google Checks" />
-        <entry key="scan-before-checkin" value="false" />
-        <entry key="scanscope" value="JavaOnly" />
-        <entry key="suppress-errors" value="false" />
-      </map>
-    </option>
-  </component>
   <component name="MarkdownProjectSettings" wasCopied="true">
     <PreviewSettings splitEditorLayout="SPLIT" splitEditorPreview="PREVIEW" useGrayscaleRendering="false" zoomFactor="1.5" maxImageWidth="0" showGitHubPageIfSynced="false" allowBrowsingInPreview="false" synchronizePreviewPosition="true" highlightPreviewType="NONE" highlightFadeOut="5" highlightOnTyping="true" synchronizeSourcePosition="true" verticallyAlignSourceAndPreviewSyncPosition="true" showSearchHighlightsInPreview="false" showSelectionInPreview="true" openRemoteLinks="true" replaceUnicodeEmoji="false" lastLayoutSetsDefault="false">
       <PanelProvider>

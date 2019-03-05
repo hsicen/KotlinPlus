@@ -14,6 +14,7 @@ import kotlin.system.measureTimeMillis
 
 fun main() = runBlocking {
 
+    //同步操作
     var time = measureTimeMillis {
         val one = doSthUsefulOne()
         val two = doSthUsefulTwo()
@@ -21,8 +22,9 @@ fun main() = runBlocking {
         println("The answer is ${one + two}")
     }
 
-    println("Sync complete in $time ms")
+    println("complete in $time ms")
 
+    //异步操作
     time = measureTimeMillis {
         val one = async { doSthUsefulOne() }
         val two = async { doSthUsefulTwo() }
