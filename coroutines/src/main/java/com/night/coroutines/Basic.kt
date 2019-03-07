@@ -21,6 +21,15 @@ fun main() {
         println("delay print：Hello word")
     }
 
+    /*thread {
+        //延时1s
+        //delay(1000)
+        Thread.sleep(1000)
+
+        println("delay print：Hello word")
+    }*/
+
+
     println("Hello world!")
     //阻塞主线程2s,保证JVM存活
     //Thread.sleep(2000)

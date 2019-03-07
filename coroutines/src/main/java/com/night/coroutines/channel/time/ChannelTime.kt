@@ -1,5 +1,6 @@
 package com.night.coroutines.channel.time
 
+import kotlinx.coroutines.channels.TickerMode
 import kotlinx.coroutines.channels.ticker
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
@@ -14,7 +15,7 @@ import kotlinx.coroutines.withTimeoutOrNull
 fun main() = runBlocking {
 
     //创建计时器通道， 每次发送延时100ms, 初始化延时0毫秒
-    val tickerChannel = ticker(delayMillis = 100, initialDelayMillis = 0)
+    val tickerChannel = ticker(delayMillis = 100, initialDelayMillis = 0, mode = TickerMode.FIXED_DELAY)
     var nextElement = withTimeoutOrNull(1) { tickerChannel.receive() }
     println("Initial element is available：$nextElement")
 
@@ -32,7 +33,7 @@ fun main() = runBlocking {
     nextElement = withTimeoutOrNull(1) { tickerChannel.receive() }
     println("Next element is immediately with some consume：$nextElement")
 
-    //在receive 调用之前，延迟的时间都被考虑在内
+    //在receive 调用之前，延迟的时间都被考虑在内(TickerMode.FIXED_DELAY)
     nextElement = withTimeoutOrNull(60) { tickerChannel.receive() }
     println("Next element is ready for 60ms：$nextElement")
 

@@ -29,7 +29,7 @@ fun main() = runBlocking {
 
     delay(1300)
     println("main::  主线程等待中...")
-    job.cancel()
-    job.join()
+    job.cancel() //取消协程
+    job.join() //等待协程执行完毕
     println("main::  即将完成退出...")
 }

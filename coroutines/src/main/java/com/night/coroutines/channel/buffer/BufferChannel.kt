@@ -14,7 +14,7 @@ import kotlinx.coroutines.runBlocking
 
 fun main() = runBlocking {
 
-    val channel = Channel<Int>(5)
+    val channel = Channel<Int>(4)
 
     val sender = launch {
         repeat(10) {
@@ -23,16 +23,9 @@ fun main() = runBlocking {
             channel.send(it)
         }
 
-        println("It is going to cancel channel.")
         channel.cancel()
-        println("Send channel is cancel.")
-    }
-
-    for (x in channel) {
-        println("I received $x")
     }
 
     delay(2000)
     sender.cancel()
-    println("The send launch is canceled.")
 }

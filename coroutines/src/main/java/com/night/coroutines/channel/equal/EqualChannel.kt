@@ -21,8 +21,8 @@ suspend fun player(name: String, table: Channel<Ball>) {
 
         ball.hits++
         println("$name is hit $ball")
-        table.send(ball)
         delay(800)
+        table.send(ball)
     }
 }
 
