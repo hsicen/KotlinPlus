@@ -1,1 +1,1 @@
-include ':app', ':coroutines', ':kotlinmvp', ':lesson', ':pageview', ':retrofit', ':generic'
+include ':app', ':coroutines', ':kotlinmvp', ':lesson', ':pageview', ':retrofit', ':generic', ':jetpack'
