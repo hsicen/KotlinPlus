@@ -22,8 +22,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     /*** 自定义操作符优先级*/
     private val opMap by lazy {
         ArrayMap<Char, Int>().apply {
-            put('[', 0)
-            put(']', 0)
             put('+', 1)
             put('-', 1)
             put('×', 2)
@@ -86,7 +84,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_9 -> {
 
                 if (isResult) return
-                et_input.setText(str + (v as Button).text)
+                et_input.text = str + (v as Button).text
                 isOpFirst = false
                 isOpFinal = false
             }
@@ -98,11 +96,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 if (isOpFirst) return
                 else if (isOpFinal && str != "") {
                     str = et_input.text.toString()
-                    et_input.setText(str.substring(0, str.length - 1) + (v as Button).text)
+                    et_input.text = str.substring(0, str.length - 1) + (v as Button).text
                     return
                 }
 
-                et_input.setText(str + (v as Button).text)
+                et_input.text = str + (v as Button).text
                 isOpFinal = true //当前最后一个字符为符号
                 isResult = false
             }
@@ -115,7 +113,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
             //清除
             R.id.btn_clear -> {
-                et_input.setText("")
+                et_input.text = ""
                 et_result.text = ""
 
                 isOpFirst = true

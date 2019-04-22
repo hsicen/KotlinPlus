@@ -8,16 +8,15 @@
     tools:context=".MainActivity"
     tools:ignore="HardcodedText">
 
-    <EditText
+    <TextView
         android:id="@+id/et_input"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:digits="1234567890.+-×÷%^"
         android:gravity="end|bottom"
         android:hint="0"
         android:textColor="@android:color/black"
         android:textColorHint="@android:color/black"
-        android:textSize="60sp"
+        android:textSize="40sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
