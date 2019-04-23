@@ -107,7 +107,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
             // 小数点
             R.id.btn_point -> {
-                //et_input.setText(str + (v as Button).text)
+                et_input.text = str + (v as Button).text
                 "暂不支持小数".toast()
             }
 
@@ -135,11 +135,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private fun getResult(str: String): Int {
         if (str.isEmpty()) return 0
 
+        //临时记录超过两位的数字
+        var numStr = ""
         str.forEach { pos ->
-            //操作数入栈
-            if (pos in '0'..'9') {
-                numStack.add(pos.toInt() - 48)
+            if (pos in '0'..'9' || pos == '.') {
+                numStr += pos
             } else {
+
+                //将操作数入栈
+                if (numStr.isNotEmpty()) {
+                    numStack.add(numStr.toInt())
+                }
+
                 //操作符入栈
                 if (opStack.isEmpty()) {
                     opStack.add(pos)
@@ -158,7 +165,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                         numStack.add(temp)
                     }
                 }
+
+                //清空临时保存的数
+                numStr = ""
             }
+        }
+
+        //将最后一位操作数入栈
+        if (numStr.isNotEmpty()) {
+            numStack.add(numStr.toInt())
         }
 
         //判断栈是否为空
