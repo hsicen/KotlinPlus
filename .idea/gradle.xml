@@ -10,12 +10,14 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/coroutines" />
+            <option value="$PROJECT_DIR$/designview" />
             <option value="$PROJECT_DIR$/generic" />
             <option value="$PROJECT_DIR$/jetpack" />
             <option value="$PROJECT_DIR$/kotlinmvp" />
             <option value="$PROJECT_DIR$/lesson" />
             <option value="$PROJECT_DIR$/pageview" />
             <option value="$PROJECT_DIR$/retrofit" />
+            <option value="$PROJECT_DIR$/studyplan" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
